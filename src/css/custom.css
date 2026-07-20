@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif+SC:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Fonts */
+  --ifm-font-family-base: 'Lora', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --ifm-font-family-headings: 'Outfit', 'Noto Serif SC', sans-serif;
+  --ifm-font-size-base: 18px;
+  --ifm-line-height-base: 1.85;
+
+  /* Cozy, book-like Light Theme Palette */
+  --ifm-background-color: #fdfbf7;
+  --ifm-navbar-background-color: #fdfbf7;
+  --ifm-footer-background-color: #f6f3eb;
+  
+  --ifm-color-primary: #a82e2e;
+  --ifm-color-primary-dark: #8c2424;
+  --ifm-color-primary-darker: #7e2020;
+  --ifm-color-primary-darkest: #611818;
+  --ifm-color-primary-light: #c13e3e;
+  --ifm-color-primary-lighter: #c94747;
+  --ifm-color-primary-lightest: #d45f5f;
+  
+  --ifm-font-color-base: #2c2724;
+  --ifm-font-color-secondary: #5a524e;
+  
+  --ifm-toc-border-color: #ece7de;
+  --ifm-menu-color-active: var(--ifm-color-primary);
+  
+  --docusaurus-highlighted-code-line-bg: rgba(168, 46, 46, 0.08);
+}
+
+[data-theme='dark'] {
+  /* Cozy, book-like Dark Theme Palette */
+  --ifm-background-color: #121214;
+  --ifm-navbar-background-color: #16161a;
+  --ifm-footer-background-color: #1c1c1f;
+  
+  --ifm-color-primary: #e27272;
+  --ifm-color-primary-dark: #cc5a5a;
+  --ifm-color-primary-darker: #c24e4e;
+  --ifm-color-primary-darkest: #a13636;
+  --ifm-color-primary-light: #ea8a8a;
+  --ifm-color-primary-lighter: #ef9797;
+  --ifm-color-primary-lightest: #f5b0b0;
+  
+  --ifm-font-color-base: #e3e1de;
+  --ifm-font-color-secondary: #b0aba4;
+  
+  --ifm-toc-border-color: #2d2d30;
+  --ifm-menu-color-active: var(--ifm-color-primary);
+  
+  --docusaurus-highlighted-code-line-bg: rgba(226, 114, 114, 0.15);
+}
+
+/* Custom layout adjustments for premium reading experience */
+.theme-doc-markdown {
+  max-width: 740px !important;
+  margin: 0 auto;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* Typography polish */
+.theme-doc-markdown h1,
+.theme-doc-markdown h2,
+.theme-doc-markdown h3,
+.theme-doc-markdown h4 {
+  font-family: var(--ifm-font-family-headings);
+  font-weight: 600;
+  margin-top: 1.8rem;
+  margin-bottom: 0.9rem;
+  color: var(--ifm-font-color-base);
+}
+
+.theme-doc-markdown h1 {
+  font-size: 2.2rem;
+  border-bottom: 2px solid var(--ifm-color-primary);
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.theme-doc-markdown h2 {
+  font-size: 1.6rem;
+}
+
+.theme-doc-markdown p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* Navbar improvements */
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  transition: background-color 0.3s ease;
+}
+
+.navbar__brand {
+  font-family: var(--ifm-font-family-headings);
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+}
+
+.navbar__title {
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+/* Sidebar styling and animations */
+.menu__list-item-link {
+  transition: all 0.2s ease-in-out;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+}
+
+.menu__list-item-link:hover {
+  background-color: rgba(168, 46, 46, 0.06);
+  transform: translateX(3px);
+}
+
+[data-theme='dark'] .menu__list-item-link:hover {
+  background-color: rgba(226, 114, 114, 0.08);
+}
+
+.menu__list-item-link--active {
+  background-color: rgba(168, 46, 46, 0.08) !important;
+  font-weight: 600;
+}
+
+[data-theme='dark'] .menu__list-item-link--active {
+  background-color: rgba(226, 114, 114, 0.12) !important;
+}
+
+/* Hide docs pagination since it can feel cluttering for an elegant book, 
+   but Docusaurus pagination is useful. Let's keep it but make it very subtle. */
+.pagination-nav__link {
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 8px;
+  background-color: transparent;
+  transition: border-color 0.2s ease;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+/* TOC Styling */
+.table-of-contents {
+  font-size: 0.85rem;
+  border-left: 1px solid var(--ifm-toc-border-color);
+}
+
+.table-of-contents__link--active {
+  font-weight: 600;
+}
