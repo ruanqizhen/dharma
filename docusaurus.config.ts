@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: '一切有为法',
   tagline: '一切有为法，如梦幻泡影，如露亦如电，应作如是观。',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -65,14 +65,7 @@ const config: Config = {
         alt: '一切有为法 Logo',
         src: 'img/logo.svg',
       },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'bookSidebar',
-          position: 'left',
-          label: '开始阅读',
-        },
-      ],
+      items: [],
     },
     footer: {
       style: 'light',
